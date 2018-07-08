@@ -40,7 +40,6 @@ func fileHandler(filename string) echo.HandlerFunc {
 
 var chat = utils.NewChat()
 
-// TODO: Fix logging
 func socket(c echo.Context) error {
 	return chat.Chatify(c)
 }
