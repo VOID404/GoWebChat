@@ -6,7 +6,7 @@ import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 
-	"github.wdf.sap.corp/wojciechnawa/webChat/utils"
+	"github.com/VOID404/GoWebChat/utils"
 )
 
 func main() {
