@@ -11,7 +11,10 @@ $.ajax({
 console.log("Your username is: " + username)
 
 let loc = window.location;
-let uri = 'ws://' + loc.host + "/socket/" + username;
+if (location.protocol === 'https:') {
+    // page is secure
+}
+let uri = (location.protocol === 'https:' ? "wss://" : "ws://") + loc.host + "/socket/" + username;
 console.log("Connecting to " + uri)
 
 ws = new WebSocket(uri);
