@@ -58,6 +58,7 @@ func (b *broadcaster) run() {
 			}
 		case cli := <-b.unreg:
 			delete(b.cli, cli)
+			close(cli)
 		case cli, ok := <-b.reg:
 			if !ok {
 				return

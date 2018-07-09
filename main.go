@@ -12,8 +12,6 @@ import (
 func main() {
 	e := echo.New()
 
-	echo.NotFoundHandler = fileHandler("html/404.html")
-
 	e.Static("/", "static/")
 	e.GET("/", fileHandler("html/index.html"))
 	e.GET("/socket/:username", socket)
